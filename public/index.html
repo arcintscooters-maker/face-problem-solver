@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Face Problem Solver - Find Your Perfect Skincare</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="app">
+    <!-- Hero -->
+    <header class="hero">
+      <div class="container">
+        <h1>Face Problem Solver</h1>
+        <p class="subtitle">Tell us your skin concerns — we'll recommend the best products for you.</p>
+      </div>
+    </header>
+
+    <main class="container">
+      <!-- Step 1: Skin Type -->
+      <section class="step" id="step-skin-type">
+        <div class="step-header">
+          <span class="step-number">1</span>
+          <h2>What's your skin type?</h2>
+        </div>
+        <div class="skin-type-grid" id="skinTypeGrid">
+          <button class="skin-type-btn" data-type="oily">
+            <span class="skin-icon">💧</span>
+            <span>Oily</span>
+          </button>
+          <button class="skin-type-btn" data-type="dry">
+            <span class="skin-icon">🏜️</span>
+            <span>Dry</span>
+          </button>
+          <button class="skin-type-btn" data-type="combination">
+            <span class="skin-icon">⚖️</span>
+            <span>Combination</span>
+          </button>
+          <button class="skin-type-btn" data-type="normal">
+            <span class="skin-icon">✨</span>
+            <span>Normal</span>
+          </button>
+          <button class="skin-type-btn" data-type="sensitive">
+            <span class="skin-icon">🌸</span>
+            <span>Sensitive</span>
+          </button>
+        </div>
+      </section>
+
+      <!-- Step 2: Problems -->
+      <section class="step" id="step-problems">
+        <div class="step-header">
+          <span class="step-number">2</span>
+          <h2>Select your skin concerns</h2>
+        </div>
+        <p class="step-hint">Pick all that apply</p>
+        <div class="problems-grid" id="problemsGrid">
+          <!-- Filled by JS -->
+        </div>
+      </section>
+
+      <!-- Get Recommendations Button -->
+      <div class="action-bar">
+        <button class="btn-recommend" id="btnRecommend" disabled>
+          Get My Recommendations
+        </button>
+      </div>
+
+      <!-- Results -->
+      <section class="results hidden" id="results">
+        <div class="step-header">
+          <span class="step-number">✓</span>
+          <h2>Your Personalized Routine</h2>
+        </div>
+
+        <!-- Top Picks -->
+        <div class="results-section">
+          <h3>Top Picks For You</h3>
+          <div class="products-grid" id="topPicks"></div>
+        </div>
+
+        <!-- Full Routine -->
+        <div class="results-section">
+          <h3>Recommended Routine</h3>
+          <div id="routineContainer"></div>
+        </div>
+
+        <button class="btn-reset" id="btnReset">Start Over</button>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="container">
+        <p>Face Problem Solver &mdash; Skincare recommendations for everyone.</p>
+        <p class="disclaimer">Disclaimer: These are general recommendations. Consult a dermatologist for persistent skin issues.</p>
+      </div>
+    </footer>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
