@@ -27,8 +27,14 @@
       <div class="container hero-content">
         <span class="hero-badge">AI-Powered Skincare Analysis</span>
         <h1>Find Your Perfect<br/>Skincare Routine</h1>
-        <p class="subtitle">Answer two simple questions and get expert product recommendations tailored to your unique skin needs.</p>
-        <a href="#step-skin-type" class="hero-cta">Get Started</a>
+        <p class="subtitle">Scan your face or pick your concerns — get expert product recommendations instantly.</p>
+        <div class="hero-btns">
+          <a href="#scanner-section" class="hero-cta" id="heroScanBtn">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M23 19a2 2 0 01-2 2H3a2 2 0 01-2-2V8a2 2 0 012-2h4l2-3h6l2 3h4a2 2 0 012 2z"/><circle cx="12" cy="13" r="4"/></svg>
+            Scan My Face
+          </a>
+          <a href="#step-skin-type" class="hero-cta-secondary" id="heroManualBtn">Or pick manually</a>
+        </div>
         <div class="hero-stats">
           <div class="stat"><span class="stat-num">25+</span><span class="stat-label">Products</span></div>
           <div class="stat-divider"></div>
@@ -39,36 +45,74 @@
       </div>
     </header>
 
-    <!-- How it works -->
-    <section class="how-it-works">
-      <div class="container">
-        <h2 class="section-title">How It Works</h2>
-        <div class="steps-row">
-          <div class="how-step">
-            <div class="how-icon">1</div>
-            <h3>Select Skin Type</h3>
-            <p>Tell us whether your skin is oily, dry, combination, normal, or sensitive.</p>
-          </div>
-          <div class="how-arrow">&#8594;</div>
-          <div class="how-step">
-            <div class="how-icon">2</div>
-            <h3>Pick Your Concerns</h3>
-            <p>Choose from 15 common skin problems — acne, dark spots, wrinkles, and more.</p>
-          </div>
-          <div class="how-arrow">&#8594;</div>
-          <div class="how-step">
-            <div class="how-icon">3</div>
-            <h3>Get Recommendations</h3>
-            <p>Receive a personalized routine with top-rated products matched to your needs.</p>
+    <main class="container main-content">
+      <!-- Face Scanner -->
+      <section class="card scanner-card" id="scanner-section">
+        <div class="step-header">
+          <span class="step-number">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M23 19a2 2 0 01-2 2H3a2 2 0 01-2-2V8a2 2 0 012-2h4l2-3h6l2 3h4a2 2 0 012 2z"/><circle cx="12" cy="13" r="4"/></svg>
+          </span>
+          <div>
+            <h2>Face Scanner</h2>
+            <p class="step-desc">Take a photo and we'll analyze your skin for common concerns.</p>
           </div>
         </div>
-      </div>
-    </section>
 
-    <main class="container main-content">
+        <div class="scanner-body">
+          <!-- Before scan -->
+          <div id="scannerPrompt" class="scanner-prompt">
+            <div class="scanner-preview-area" id="scannerPreviewArea">
+              <video id="cameraFeed" autoplay playsinline></video>
+              <canvas id="scannerCanvas" style="display:none;"></canvas>
+              <img id="capturedPhoto" style="display:none;" />
+              <div class="scanner-overlay" id="scannerOverlay">
+                <div class="face-guide">
+                  <svg viewBox="0 0 200 260" fill="none" stroke="rgba(255,255,255,0.5)" stroke-width="2">
+                    <ellipse cx="100" cy="130" rx="75" ry="100" stroke-dasharray="8 4"/>
+                  </svg>
+                </div>
+              </div>
+              <div class="scanner-placeholder" id="scannerPlaceholder">
+                <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" opacity="0.4"><path d="M23 19a2 2 0 01-2 2H3a2 2 0 01-2-2V8a2 2 0 012-2h4l2-3h6l2 3h4a2 2 0 012 2z"/><circle cx="12" cy="13" r="4"/></svg>
+                <p>Position your face in the oval</p>
+              </div>
+            </div>
+            <div class="scanner-actions">
+              <button class="btn-scan" id="btnStartCamera">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M23 19a2 2 0 01-2 2H3a2 2 0 01-2-2V8a2 2 0 012-2h4l2-3h6l2 3h4a2 2 0 012 2z"/><circle cx="12" cy="13" r="4"/></svg>
+                Open Camera
+              </button>
+              <button class="btn-scan-capture hidden" id="btnCapture">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="3" fill="currentColor"/></svg>
+                Capture &amp; Analyze
+              </button>
+              <button class="btn-scan-retake hidden" id="btnRetake">Retake</button>
+            </div>
+          </div>
+
+          <!-- Analysis results -->
+          <div id="scanResults" class="scan-results hidden">
+            <h3>Detected Concerns</h3>
+            <div class="scan-findings" id="scanFindings"></div>
+            <button class="btn-use-results" id="btnUseResults">Use These Results</button>
+            <button class="btn-scan-again" id="btnScanAgain">Scan Again</button>
+          </div>
+        </div>
+      </section>
+
+      <!-- Stepper tabs for mobile -->
+      <div class="stepper-tabs" id="stepperTabs">
+        <button class="stepper-tab active" data-step="1">
+          <span class="stepper-num">1</span> Skin Type
+        </button>
+        <button class="stepper-tab" data-step="2">
+          <span class="stepper-num">2</span> Concerns
+        </button>
+      </div>
+
       <!-- Step 1: Skin Type -->
-      <section class="step card" id="step-skin-type">
-        <div class="step-header">
+      <section class="step card step-panel active" id="step-skin-type" data-step="1">
+        <div class="step-header desktop-only">
           <span class="step-number">1</span>
           <div>
             <h2>What's your skin type?</h2>
@@ -84,7 +128,7 @@
           <button class="skin-type-btn" data-type="dry">
             <div class="skin-icon-wrap"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg></div>
             <span class="skin-label">Dry</span>
-            <span class="skin-desc">Tight, flaky, rough patches</span>
+            <span class="skin-desc">Tight, flaky patches</span>
           </button>
           <button class="skin-type-btn" data-type="combination">
             <div class="skin-icon-wrap"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 2a10 10 0 000 20"/></svg></div>
@@ -99,23 +143,25 @@
           <button class="skin-type-btn" data-type="sensitive">
             <div class="skin-icon-wrap"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div>
             <span class="skin-label">Sensitive</span>
-            <span class="skin-desc">Easily irritated, reactive</span>
+            <span class="skin-desc">Easily irritated</span>
           </button>
         </div>
+        <button class="btn-next-step mobile-only" id="btnNextStep">
+          Next: Pick Concerns
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </button>
       </section>
 
       <!-- Step 2: Problems -->
-      <section class="step card" id="step-problems">
-        <div class="step-header">
+      <section class="step card step-panel" id="step-problems" data-step="2">
+        <div class="step-header desktop-only">
           <span class="step-number">2</span>
           <div>
             <h2>What are your skin concerns?</h2>
-            <p class="step-desc">Select all that apply — we'll match products that address multiple issues at once.</p>
+            <p class="step-desc">Select all that apply.</p>
           </div>
         </div>
-        <div class="problems-grid" id="problemsGrid">
-          <!-- Filled by JS -->
-        </div>
+        <div class="problems-grid" id="problemsGrid"></div>
       </section>
 
       <!-- Get Recommendations Button -->
@@ -136,26 +182,33 @@
           </div>
         </div>
 
+        <!-- Results tabs for mobile -->
+        <div class="results-tabs" id="resultsTabs">
+          <button class="results-tab active" data-rtab="picks">Top Picks</button>
+          <button class="results-tab" data-rtab="stores">Where to Buy</button>
+          <button class="results-tab" data-rtab="routine">Full Routine</button>
+        </div>
+
         <!-- Top Picks -->
-        <div class="results-section">
-          <h3 class="section-label">Top Picks For You</h3>
+        <div class="results-section results-panel active" data-rtab="picks">
+          <h3 class="section-label desktop-only">Top Picks For You</h3>
           <div class="products-grid" id="topPicks"></div>
         </div>
 
         <!-- Where to Buy -->
-        <div class="results-section location-section hidden" id="locationBar">
-          <h3 class="section-label">
+        <div class="results-section results-panel location-section hidden" id="locationBar" data-rtab="stores">
+          <h3 class="section-label desktop-only">
             <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="vertical-align:-3px;margin-right:6px"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
             Where to Buy — <span id="locationText"></span>
           </h3>
-          <p class="section-sublabel">Based on your location, here are the best places to buy these products.</p>
+          <p class="section-sublabel desktop-only">Based on your location, here are the best places to buy these products.</p>
           <div class="stores-grid" id="storesContainer"></div>
         </div>
 
         <!-- Full Routine -->
-        <div class="results-section">
-          <h3 class="section-label">Complete Routine</h3>
-          <p class="section-sublabel">Products organized by application order for best results.</p>
+        <div class="results-section results-panel" data-rtab="routine">
+          <h3 class="section-label desktop-only">Complete Routine</h3>
+          <p class="section-sublabel desktop-only">Products organized by application order for best results.</p>
           <div id="routineContainer"></div>
         </div>
 
@@ -174,11 +227,12 @@
           <span class="logo-icon">&#9672;</span> GlowGuide
         </div>
         <p>Science-backed skincare recommendations for everyone.</p>
-        <p class="disclaimer">Disclaimer: These are general recommendations based on common dermatological guidance. Always consult a dermatologist for persistent or severe skin conditions.</p>
+        <p class="disclaimer">Disclaimer: These are general recommendations. Always consult a dermatologist for persistent skin conditions.</p>
       </div>
     </footer>
   </div>
 
+  <script src="scanner.js"></script>
   <script src="app.js"></script>
 </body>
 </html>
