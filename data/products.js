@@ -27,6 +27,7 @@ const PRODUCTS = [
     description: "A foaming cleanser that fights acne while maintaining the skin barrier with ceramides.",
     price: "$15",
     rating: 4.5,
+    image: "https://m.media-amazon.com/images/I/51YAOPNK0fL._SL500_.jpg",
   },
   {
     name: "Paula's Choice 2% BHA Liquid Exfoliant",
@@ -37,6 +38,7 @@ const PRODUCTS = [
     description: "A leave-on exfoliant that unclogs pores, smooths wrinkles, and evens skin tone.",
     price: "$32",
     rating: 4.7,
+    image: "https://m.media-amazon.com/images/I/71bBGkIkklL._SL500_.jpg",
   },
   {
     name: "La Roche-Posay Effaclar Duo",
@@ -47,6 +49,7 @@ const PRODUCTS = [
     description: "Dual-action acne treatment that targets blemishes and prevents new breakouts.",
     price: "$30",
     rating: 4.4,
+    image: "https://m.media-amazon.com/images/I/61YH7B3p8EL._SL500_.jpg",
   },
   // Dark Spots / Hyperpigmentation
   {
@@ -58,6 +61,7 @@ const PRODUCTS = [
     description: "A high-strength vitamin C formula that brightens skin and fades dark spots.",
     price: "$6",
     rating: 4.3,
+    image: "https://m.media-amazon.com/images/I/61Q2W0sab7L._SL500_.jpg",
   },
   {
     name: "Good Molecules Discoloration Correcting Serum",
@@ -68,6 +72,7 @@ const PRODUCTS = [
     description: "Targets stubborn dark spots and post-acne marks with a gentle yet effective formula.",
     price: "$14",
     rating: 4.6,
+    image: "https://m.media-amazon.com/images/I/51nBJDhMqxL._SL500_.jpg",
   },
   {
     name: "Murad Rapid Dark Spot Correcting Serum",
@@ -78,6 +83,7 @@ const PRODUCTS = [
     description: "Clinical-strength serum that visibly reduces dark spots in as little as one week.",
     price: "$72",
     rating: 4.4,
+    image: "https://m.media-amazon.com/images/I/61jLiCovRnL._SL500_.jpg",
   },
   // Wrinkles / Anti-Aging
   {
@@ -89,6 +95,7 @@ const PRODUCTS = [
     description: "A moderate-strength retinol serum for reducing fine lines and improving skin texture.",
     price: "$6",
     rating: 4.3,
+    image: "https://m.media-amazon.com/images/I/61mEkBbOJxL._SL500_.jpg",
   },
   {
     name: "RoC Retinol Correxion Deep Wrinkle Night Cream",
@@ -99,6 +106,7 @@ const PRODUCTS = [
     description: "Clinically proven to visibly reduce wrinkles and brighten skin overnight.",
     price: "$25",
     rating: 4.4,
+    image: "https://m.media-amazon.com/images/I/71V5-aIuJML._SL500_.jpg",
   },
   {
     name: "Neutrogena Rapid Wrinkle Repair Serum",
@@ -109,6 +117,7 @@ const PRODUCTS = [
     description: "Fast-acting retinol serum that visibly reduces wrinkles and evens skin tone.",
     price: "$22",
     rating: 4.3,
+    image: "https://m.media-amazon.com/images/I/71O6XVGH1TL._SL500_.jpg",
   },
   // Dry Skin
   {
@@ -120,6 +129,7 @@ const PRODUCTS = [
     description: "Rich, non-greasy moisturizer that provides 24-hour hydration and restores the skin barrier.",
     price: "$16",
     rating: 4.7,
+    image: "https://m.media-amazon.com/images/I/61S7BrCBj7L._SL500_.jpg",
   },
   {
     name: "The Ordinary Hyaluronic Acid 2% + B5",
@@ -130,6 +140,7 @@ const PRODUCTS = [
     description: "A lightweight hydrating serum with multiple weights of hyaluronic acid for deep hydration.",
     price: "$8",
     rating: 4.5,
+    image: "https://m.media-amazon.com/images/I/61RsUapH-1L._SL500_.jpg",
   },
   {
     name: "La Roche-Posay Toleriane Double Repair Moisturizer",
@@ -140,6 +151,7 @@ const PRODUCTS = [
     description: "Restores the skin barrier and provides long-lasting moisture for sensitive skin.",
     price: "$20",
     rating: 4.6,
+    image: "https://m.media-amazon.com/images/I/71u1gsBGURL._SL500_.jpg",
   },
   // Oily Skin
   {
@@ -151,6 +163,7 @@ const PRODUCTS = [
     description: "Controls sebum production and minimizes pore appearance with a lightweight formula.",
     price: "$6",
     rating: 4.5,
+    image: "https://m.media-amazon.com/images/I/61Q2W0sab7L._SL500_.jpg",
   },
   {
     name: "Neutrogena Hydro Boost Water Gel",
@@ -161,6 +174,7 @@ const PRODUCTS = [
     description: "Oil-free, water-based gel moisturizer that hydrates without clogging pores.",
     price: "$20",
     rating: 4.5,
+    image: "https://m.media-amazon.com/images/I/71MXKSp-GzL._SL500_.jpg",
   },
   // Dark Circles
   {
@@ -172,6 +186,7 @@ const PRODUCTS = [
     description: "Reduces dark circles and puffiness while strengthening the delicate under-eye skin.",
     price: "$15",
     rating: 4.3,
+    image: "https://m.media-amazon.com/images/I/61mVRHzP2fL._SL500_.jpg",
   },
   {
     name: "The INKEY List Caffeine Eye Cream",
@@ -182,6 +197,7 @@ const PRODUCTS = [
     description: "Depuffs and brightens under-eyes with a fast-absorbing caffeine formula.",
     price: "$10",
     rating: 4.2,
+    image: "https://m.media-amazon.com/images/I/51GQof79ZDL._SL500_.jpg",
   },
   // Redness / Rosacea
   {
@@ -193,6 +209,7 @@ const PRODUCTS = [
     description: "Calms redness and repairs the skin barrier with soothing centella asiatica.",
     price: "$48",
     rating: 4.5,
+    image: "https://m.media-amazon.com/images/I/51RqzELJURL._SL500_.jpg",
   },
   {
     name: "Azelaic Acid Suspension 10% (The Ordinary)",
@@ -203,6 +220,7 @@ const PRODUCTS = [
     description: "Brightens skin, reduces redness, and fights blemishes with azelaic acid.",
     price: "$8",
     rating: 4.4,
+    image: "https://m.media-amazon.com/images/I/61hPHacVP-L._SL500_.jpg",
   },
   // Sun Damage
   {
@@ -214,6 +232,7 @@ const PRODUCTS = [
     description: "Lightweight, oil-free sunscreen that calms and protects acne-prone and sensitive skin.",
     price: "$37",
     rating: 4.7,
+    image: "https://m.media-amazon.com/images/I/61k3YOFwp-L._SL500_.jpg",
   },
   {
     name: "La Roche-Posay Anthelios Melt-in Milk SPF 100",
@@ -224,6 +243,7 @@ const PRODUCTS = [
     description: "Ultra-high protection sunscreen with a lightweight, non-greasy finish.",
     price: "$36",
     rating: 4.6,
+    image: "https://m.media-amazon.com/images/I/71RNJQRaMKL._SL500_.jpg",
   },
   // Dullness
   {
@@ -235,6 +255,7 @@ const PRODUCTS = [
     description: "An exfoliating toner that reveals brighter, smoother skin with each use.",
     price: "$15",
     rating: 4.4,
+    image: "https://m.media-amazon.com/images/I/51sKuSaBNaL._SL500_.jpg",
   },
   // Sensitivity / Eczema
   {
@@ -246,6 +267,7 @@ const PRODUCTS = [
     description: "Ultra-gentle cleanser formulated for the most sensitive and eczema-prone skin.",
     price: "$9",
     rating: 4.6,
+    image: "https://m.media-amazon.com/images/I/610fHHsXRnL._SL500_.jpg",
   },
   {
     name: "Aveeno Eczema Therapy Moisturizing Cream",
@@ -256,6 +278,7 @@ const PRODUCTS = [
     description: "Clinically proven to soothe eczema-prone skin and strengthen the skin barrier.",
     price: "$15",
     rating: 4.5,
+    image: "https://m.media-amazon.com/images/I/71dK-OhbQEL._SL500_.jpg",
   },
   // Scars
   {
@@ -267,6 +290,7 @@ const PRODUCTS = [
     description: "A 10-minute exfoliating mask that dramatically improves skin texture and radiance.",
     price: "$8",
     rating: 4.6,
+    image: "https://m.media-amazon.com/images/I/61VjS5DM5KL._SL500_.jpg",
   },
   {
     name: "Bio-Oil Skincare Oil",
@@ -277,6 +301,7 @@ const PRODUCTS = [
     description: "Specialist skincare oil that helps improve the appearance of scars and uneven skin tone.",
     price: "$14",
     rating: 4.3,
+    image: "https://m.media-amazon.com/images/I/51Eri3aQ+NL._SL500_.jpg",
   },
 ];
 
