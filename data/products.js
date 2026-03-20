@@ -17,7 +17,6 @@ const SKIN_PROBLEMS = [
 ];
 
 const PRODUCTS = [
-  // Acne
   {
     name: "CeraVe Acne Foaming Cream Cleanser",
     type: "Cleanser",
@@ -27,7 +26,7 @@ const PRODUCTS = [
     description: "A foaming cleanser that fights acne while maintaining the skin barrier with ceramides.",
     price: "$15",
     rating: 4.5,
-    image: "https://m.media-amazon.com/images/I/51YAOPNK0fL._SL500_.jpg",
+    image: "https://images.openbeautyfacts.org/images/products/360/600/051/2238/front_en.4.400.jpg",
   },
   {
     name: "Paula's Choice 2% BHA Liquid Exfoliant",
@@ -38,7 +37,7 @@ const PRODUCTS = [
     description: "A leave-on exfoliant that unclogs pores, smooths wrinkles, and evens skin tone.",
     price: "$32",
     rating: 4.7,
-    image: "https://m.media-amazon.com/images/I/71bBGkIkklL._SL500_.jpg",
+    image: "https://images.openbeautyfacts.org/images/products/065/543/900/5913/front_en.3.400.jpg",
   },
   {
     name: "La Roche-Posay Effaclar Duo",
@@ -49,9 +48,8 @@ const PRODUCTS = [
     description: "Dual-action acne treatment that targets blemishes and prevents new breakouts.",
     price: "$30",
     rating: 4.4,
-    image: "https://m.media-amazon.com/images/I/61YH7B3p8EL._SL500_.jpg",
+    image: "https://images.openbeautyfacts.org/images/products/333/787/559/8071/front_fr.4.400.jpg",
   },
-  // Dark Spots / Hyperpigmentation
   {
     name: "The Ordinary Vitamin C Suspension 23%",
     type: "Serum",
@@ -61,7 +59,7 @@ const PRODUCTS = [
     description: "A high-strength vitamin C formula that brightens skin and fades dark spots.",
     price: "$6",
     rating: 4.3,
-    image: "https://m.media-amazon.com/images/I/61Q2W0sab7L._SL500_.jpg",
+    image: "https://incidecoder-content.storage.googleapis.com/bbf45d42-67a6-4a8d-9203-94294e343f48/products/the-ordinary-vitamin-c-suspension-23-ha-spheres-2/the-ordinary-vitamin-c-suspension-23-ha-spheres-2_front_photo_original.jpeg",
   },
   {
     name: "Good Molecules Discoloration Correcting Serum",
@@ -72,7 +70,7 @@ const PRODUCTS = [
     description: "Targets stubborn dark spots and post-acne marks with a gentle yet effective formula.",
     price: "$14",
     rating: 4.6,
-    image: "https://m.media-amazon.com/images/I/51nBJDhMqxL._SL500_.jpg",
+    image: "https://incidecoder-content.storage.googleapis.com/432a922b-5527-48a4-a4b3-d2b308d48a7c/products/good-molecules-discoloration-correcting-serum/good-molecules-discoloration-correcting-serum_front_photo_original.jpeg",
   },
   {
     name: "Murad Rapid Dark Spot Correcting Serum",
@@ -83,9 +81,8 @@ const PRODUCTS = [
     description: "Clinical-strength serum that visibly reduces dark spots in as little as one week.",
     price: "$72",
     rating: 4.4,
-    image: "https://m.media-amazon.com/images/I/61jLiCovRnL._SL500_.jpg",
+    image: "https://incidecoder-content.storage.googleapis.com/6956b7f1-88c3-4c33-9788-777070b8212a/products/murad-rapid-dark-spot-correcting-serum/murad-rapid-dark-spot-correcting-serum_front_photo_original.jpeg",
   },
-  // Wrinkles / Anti-Aging
   {
     name: "The Ordinary Retinol 0.5% in Squalane",
     type: "Serum",
@@ -95,7 +92,7 @@ const PRODUCTS = [
     description: "A moderate-strength retinol serum for reducing fine lines and improving skin texture.",
     price: "$6",
     rating: 4.3,
-    image: "https://m.media-amazon.com/images/I/61mEkBbOJxL._SL500_.jpg",
+    image: "https://incidecoder-content.storage.googleapis.com/1cc61f3d-e9cb-4261-a861-121945cbabe7/products/the-ordinary-retinol-0-5-in-squalane/the-ordinary-retinol-0-5-in-squalane_front_photo_original.jpeg",
   },
   {
     name: "RoC Retinol Correxion Deep Wrinkle Night Cream",
@@ -106,7 +103,7 @@ const PRODUCTS = [
     description: "Clinically proven to visibly reduce wrinkles and brighten skin overnight.",
     price: "$25",
     rating: 4.4,
-    image: "https://m.media-amazon.com/images/I/71V5-aIuJML._SL500_.jpg",
+    image: "https://incidecoder-content.storage.googleapis.com/e7ae21e7-941f-4790-8515-d27efb624c11/products/roc-retinol-correxion-deep-wrinkle-night-cream/roc-retinol-correxion-deep-wrinkle-night-cream_front_photo_original.jpeg",
   },
   {
     name: "Neutrogena Rapid Wrinkle Repair Serum",
@@ -117,9 +114,8 @@ const PRODUCTS = [
     description: "Fast-acting retinol serum that visibly reduces wrinkles and evens skin tone.",
     price: "$22",
     rating: 4.3,
-    image: "https://m.media-amazon.com/images/I/71O6XVGH1TL._SL500_.jpg",
+    image: "https://incidecoder-content.storage.googleapis.com/802308d6-bf73-43ee-ba42-b9086d04c8da/products/neutrogena-rapid-wrinkle-repair-serum/neutrogena-rapid-wrinkle-repair-serum_front_photo_original.jpeg",
   },
-  // Dry Skin
   {
     name: "CeraVe Moisturizing Cream",
     type: "Moisturizer",
@@ -129,7 +125,7 @@ const PRODUCTS = [
     description: "Rich, non-greasy moisturizer that provides 24-hour hydration and restores the skin barrier.",
     price: "$16",
     rating: 4.7,
-    image: "https://m.media-amazon.com/images/I/61S7BrCBj7L._SL500_.jpg",
+    image: "https://images.openbeautyfacts.org/images/products/360/600/053/7439/front_en.13.400.jpg",
   },
   {
     name: "The Ordinary Hyaluronic Acid 2% + B5",
@@ -140,7 +136,7 @@ const PRODUCTS = [
     description: "A lightweight hydrating serum with multiple weights of hyaluronic acid for deep hydration.",
     price: "$8",
     rating: 4.5,
-    image: "https://m.media-amazon.com/images/I/61RsUapH-1L._SL500_.jpg",
+    image: "https://images.openbeautyfacts.org/images/products/076/991/519/0199/front_en.10.400.jpg",
   },
   {
     name: "La Roche-Posay Toleriane Double Repair Moisturizer",
@@ -151,9 +147,8 @@ const PRODUCTS = [
     description: "Restores the skin barrier and provides long-lasting moisture for sensitive skin.",
     price: "$20",
     rating: 4.6,
-    image: "https://m.media-amazon.com/images/I/71u1gsBGURL._SL500_.jpg",
+    image: "https://images.openbeautyfacts.org/images/products/333/787/554/5846/front_en.3.400.jpg",
   },
-  // Oily Skin
   {
     name: "The Ordinary Niacinamide 10% + Zinc 1%",
     type: "Serum",
@@ -163,7 +158,7 @@ const PRODUCTS = [
     description: "Controls sebum production and minimizes pore appearance with a lightweight formula.",
     price: "$6",
     rating: 4.5,
-    image: "https://m.media-amazon.com/images/I/61Q2W0sab7L._SL500_.jpg",
+    image: "https://incidecoder-content.storage.googleapis.com/29182f8e-b92d-428c-a108-ffc41307c408/products/the-ordinary-niacinamide-2/the-ordinary-niacinamide-2_front_photo_original.jpeg",
   },
   {
     name: "Neutrogena Hydro Boost Water Gel",
@@ -174,9 +169,8 @@ const PRODUCTS = [
     description: "Oil-free, water-based gel moisturizer that hydrates without clogging pores.",
     price: "$20",
     rating: 4.5,
-    image: "https://m.media-amazon.com/images/I/71MXKSp-GzL._SL500_.jpg",
+    image: "https://images.openbeautyfacts.org/images/products/789/101/088/2983/front_xx.6.400.jpg",
   },
-  // Dark Circles
   {
     name: "CeraVe Eye Repair Cream",
     type: "Eye Cream",
@@ -186,7 +180,7 @@ const PRODUCTS = [
     description: "Reduces dark circles and puffiness while strengthening the delicate under-eye skin.",
     price: "$15",
     rating: 4.3,
-    image: "https://m.media-amazon.com/images/I/61mVRHzP2fL._SL500_.jpg",
+    image: "https://images.openbeautyfacts.org/images/products/333/787/559/7272/front_en.8.400.jpg",
   },
   {
     name: "The INKEY List Caffeine Eye Cream",
@@ -197,9 +191,8 @@ const PRODUCTS = [
     description: "Depuffs and brightens under-eyes with a fast-absorbing caffeine formula.",
     price: "$10",
     rating: 4.2,
-    image: "https://m.media-amazon.com/images/I/51GQof79ZDL._SL500_.jpg",
+    image: "https://incidecoder-content.storage.googleapis.com/76b0f315-5fe2-4c6f-ae13-d00bec2a0471/products/the-inkey-list-caffeine-eye-cream/the-inkey-list-caffeine-eye-cream_front_photo_original.jpeg",
   },
-  // Redness / Rosacea
   {
     name: "Dr. Jart+ Cicapair Tiger Grass Cream",
     type: "Moisturizer",
@@ -209,7 +202,7 @@ const PRODUCTS = [
     description: "Calms redness and repairs the skin barrier with soothing centella asiatica.",
     price: "$48",
     rating: 4.5,
-    image: "https://m.media-amazon.com/images/I/51RqzELJURL._SL500_.jpg",
+    image: "https://incidecoder-content.storage.googleapis.com/784a8e19-427b-446e-a559-3a60df48150c/products/dr-jart-cicapair-tiger-grass-cream/dr-jart-cicapair-tiger-grass-cream_front_photo_original.jpeg",
   },
   {
     name: "Azelaic Acid Suspension 10% (The Ordinary)",
@@ -220,9 +213,8 @@ const PRODUCTS = [
     description: "Brightens skin, reduces redness, and fights blemishes with azelaic acid.",
     price: "$8",
     rating: 4.4,
-    image: "https://m.media-amazon.com/images/I/61hPHacVP-L._SL500_.jpg",
+    image: "https://images.openbeautyfacts.org/images/products/076/991/519/0588/front_en.13.400.jpg",
   },
-  // Sun Damage
   {
     name: "EltaMD UV Clear Broad-Spectrum SPF 46",
     type: "Sunscreen",
@@ -232,7 +224,7 @@ const PRODUCTS = [
     description: "Lightweight, oil-free sunscreen that calms and protects acne-prone and sensitive skin.",
     price: "$37",
     rating: 4.7,
-    image: "https://m.media-amazon.com/images/I/61k3YOFwp-L._SL500_.jpg",
+    image: "https://incidecoder-content.storage.googleapis.com/8a4cff7a-124f-472d-a9c2-747539f90608/products/eltamd-uv-clear-broad-spectrum-spf-46/eltamd-uv-clear-broad-spectrum-spf-46_front_photo_original.jpeg",
   },
   {
     name: "La Roche-Posay Anthelios Melt-in Milk SPF 100",
@@ -243,9 +235,8 @@ const PRODUCTS = [
     description: "Ultra-high protection sunscreen with a lightweight, non-greasy finish.",
     price: "$36",
     rating: 4.6,
-    image: "https://m.media-amazon.com/images/I/71RNJQRaMKL._SL500_.jpg",
+    image: "https://incidecoder-content.storage.googleapis.com/0ae2a205-f5d2-4820-bcf1-571dff152ecf/products/la-roche-posay-anthelios-melt-in-milk-sunscreen-for-face-body-spf-100/la-roche-posay-anthelios-melt-in-milk-sunscreen-for-face-body-spf-100_front_photo_original.jpeg",
   },
-  // Dullness
   {
     name: "Pixi Glow Tonic",
     type: "Toner",
@@ -255,9 +246,8 @@ const PRODUCTS = [
     description: "An exfoliating toner that reveals brighter, smoother skin with each use.",
     price: "$15",
     rating: 4.4,
-    image: "https://m.media-amazon.com/images/I/51sKuSaBNaL._SL500_.jpg",
+    image: "https://incidecoder-content.storage.googleapis.com/0079ceff-bbf2-4ec6-9c6d-42f7ed9a66e1/products/pixi-glow-tonic/pixi-glow-tonic_front_photo_original.jpeg",
   },
-  // Sensitivity / Eczema
   {
     name: "Vanicream Gentle Facial Cleanser",
     type: "Cleanser",
@@ -267,7 +257,7 @@ const PRODUCTS = [
     description: "Ultra-gentle cleanser formulated for the most sensitive and eczema-prone skin.",
     price: "$9",
     rating: 4.6,
-    image: "https://m.media-amazon.com/images/I/610fHHsXRnL._SL500_.jpg",
+    image: "https://incidecoder-content.storage.googleapis.com/136d4abf-42b5-4853-b5d9-7063455dd2e4/products/vanicream-gentle-facial-cleanser/vanicream-gentle-facial-cleanser_front_photo_original.jpeg",
   },
   {
     name: "Aveeno Eczema Therapy Moisturizing Cream",
@@ -278,9 +268,8 @@ const PRODUCTS = [
     description: "Clinically proven to soothe eczema-prone skin and strengthen the skin barrier.",
     price: "$15",
     rating: 4.5,
-    image: "https://m.media-amazon.com/images/I/71dK-OhbQEL._SL500_.jpg",
+    image: "https://images.openbeautyfacts.org/images/products/038/137/115/1059/front_en.3.400.jpg",
   },
-  // Scars
   {
     name: "The Ordinary AHA 30% + BHA 2% Peeling Solution",
     type: "Treatment",
@@ -290,7 +279,7 @@ const PRODUCTS = [
     description: "A 10-minute exfoliating mask that dramatically improves skin texture and radiance.",
     price: "$8",
     rating: 4.6,
-    image: "https://m.media-amazon.com/images/I/61VjS5DM5KL._SL500_.jpg",
+    image: "https://images.openbeautyfacts.org/images/products/610/661/519/1004/front_en.8.400.jpg",
   },
   {
     name: "Bio-Oil Skincare Oil",
@@ -301,36 +290,25 @@ const PRODUCTS = [
     description: "Specialist skincare oil that helps improve the appearance of scars and uneven skin tone.",
     price: "$14",
     rating: 4.3,
-    image: "https://m.media-amazon.com/images/I/51Eri3aQ+NL._SL500_.jpg",
+    image: "https://images.openbeautyfacts.org/images/products/089/103/800/1004/front_en.8.400.jpg",
   },
 ];
 
 function getRecommendations(problemIds, skinType) {
   const scored = PRODUCTS.map((product) => {
     let score = 0;
-
-    // Score based on how many selected problems this product targets
     const matchedProblems = product.targets.filter((t) => problemIds.includes(t));
     score += matchedProblems.length * 10;
-
-    // Bonus if skin type matches
     if (skinType && product.skinTypes.includes(skinType)) {
       score += 3;
     }
-
-    // Bonus for rating
     score += product.rating;
-
     return { ...product, score, matchedProblems };
   });
 
-  // Filter to products that match at least one problem
   const relevant = scored.filter((p) => p.matchedProblems.length > 0);
-
-  // Sort by score descending
   relevant.sort((a, b) => b.score - a.score);
 
-  // Group by product type for a routine
   const routine = {};
   for (const product of relevant) {
     if (!routine[product.type]) {
@@ -339,7 +317,6 @@ function getRecommendations(problemIds, skinType) {
     routine[product.type].push(product);
   }
 
-  // Take top 2 per category
   const finalRoutine = {};
   for (const [type, products] of Object.entries(routine)) {
     finalRoutine[type] = products.slice(0, 2);

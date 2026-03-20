@@ -274,8 +274,9 @@ document.addEventListener("DOMContentLoaded", () => {
       matchedHtml = `<div class="matched-problems">${tags}</div>`;
     }
 
-    // Use image proxy to avoid hotlink blocking
-    const imageUrl = product.image ? `/api/image-proxy?url=${encodeURIComponent(product.image)}` : "";
+    // Try direct URL first, fall back to proxy if blocked
+    const directUrl = product.image || "";
+    const proxyUrl = product.image ? `/api/image-proxy?url=${encodeURIComponent(product.image)}` : "";
     const productInitials = product.name.split(" ").slice(0, 2).map(w => w[0]).join("").toUpperCase();
 
     // Build buy link if store data available
@@ -295,9 +296,9 @@ document.addEventListener("DOMContentLoaded", () => {
       <div class="product-card-image">
         <span class="product-type-badge">${product.type}</span>
         <div class="product-img-placeholder" id="placeholder-${Math.random().toString(36).slice(2)}">${productInitials}</div>
-        <img src="${imageUrl}" alt="${product.name}" loading="lazy"
+        <img src="${directUrl}" alt="${product.name}" loading="lazy"
           onload="this.style.opacity='1';this.previousElementSibling.style.display='none';"
-          onerror="this.style.display='none';" />
+          onerror="if(this.dataset.retry!=='1'&&'${proxyUrl}'){this.dataset.retry='1';this.src='${proxyUrl}';}else{this.style.display='none';}" />
       </div>
       <div class="product-card-body">
         <h4>${product.name}</h4>
